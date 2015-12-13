@@ -13,6 +13,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.subzero.ld34.LD34;
 import com.subzero.ld34.entities.Blossom;
+import com.subzero.ld34.entities.Citizen;
 import com.subzero.ld34.environments.City;
 import com.subzero.ld34.images.ImageProvider;
 
@@ -26,6 +27,7 @@ public class GameScreen implements Screen{
 	private Viewport viewport;
 	private Blossom blossom;
 	private City city;
+	private Citizen citizen;
 	
 	public GameScreen(LD34 game, AssetManager assetManager){
 		this.game = game;
@@ -38,6 +40,7 @@ public class GameScreen implements Screen{
 		blossom = new Blossom(assetManager);
 		city = new City(assetManager, blossom.getDx(), blossom.getDy());
 		blossom.setBorders(113, 787);
+		citizen = new Citizen(assetManager);
 	}
 
 	@Override
@@ -58,6 +61,7 @@ public class GameScreen implements Screen{
 		batch.setProjectionMatrix(camera.combined);
 		batch.begin();
 		city.render(batch);
+		citizen.render(batch);
 		batch.end();
 		
 		shapeRenderer.setProjectionMatrix(camera.combined);

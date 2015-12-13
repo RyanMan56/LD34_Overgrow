@@ -17,6 +17,7 @@ public class LD34 extends Game {
 		assetManager.load("Petals.png", Texture.class);
 		assetManager.load("City.png", Texture.class);
 		assetManager.load("Body.png", Texture.class);
+		assetManager.load("Citizens.png", Texture.class);
 	}
 
 	@Override
