@@ -31,5 +31,9 @@ public class City {
 		batch.draw(city[0], cityBounds[0].x, cityBounds[0].y += dy);
 		batch.draw(city[1], cityBounds[1].x, cityBounds[1].y += dy);
 	}
+	
+	public void setDy(float dy){
+		this.dy = dy;
+	}
 
 }
